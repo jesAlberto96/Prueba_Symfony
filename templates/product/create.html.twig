@@ -1,0 +1,17 @@
+{% extends "layout.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+{% endblock %}
+
+{% block title %}Crear producto!{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="title">Crear producto</div>
+
+        {{ form(form, {'action': path('create'), 'method': 'POST'}) }}
+
+        <a class="button btnEliminar" href="{{ path('inicio') }}">Atrás</a>
+    </div>
+{% endblock %}

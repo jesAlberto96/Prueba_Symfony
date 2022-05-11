@@ -1,0 +1,115 @@
+body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+*, *:before, *:after {
+	box-sizing:border-box;
+}
+
+body {
+	padding:24;
+	font-family:'Source Sans Pro', sans-serif;
+	margin:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+}
+
+.container {
+	min-height: 100vh;
+    height: auto;
+    width: 100%;
+    padding: 8vh 40vh;
+    background: #03465c;
+}
+
+.title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+#product div{
+    margin-top: 4vh;
+}
+
+#product div{
+    height: auto;
+    position: relative;
+    width: 100%;
+    margin-bottom: 4vh;
+}
+
+#product div label{
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+}
+
+#product div input, textarea, select{
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 5vh;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+#product div button{
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#product div button:hover {
+    background-color: #06b;
+}
+
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.btnCrear {background-color: #4CAF50;}
+.btnCrear:hover {background-color: #028302;}
+.btnEditar {background-color: #008CBA;}
+.btnEditar:hover {background-color: #38c1ef;}
+.btnEliminar {background-color: #e00101;}
+.btnEliminar:hover {background-color: #e94848;}
+
+ul li{
+    color: #e00101;
+}

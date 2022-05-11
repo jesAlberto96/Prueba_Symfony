@@ -1,0 +1,47 @@
+{% extends "layout.html.twig" %}
+{% block title %}Lista de productos!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/list.css') }}">
+	<script type="text/javascript" src="{{ asset('js/list.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+		<div>
+			<a href="{{ path('create') }}" class="button btnCrear">Nueva factura</a>
+		</div>
+		<div class="container-facturas">
+			<div class="table">
+				<div class="table-header">
+					<div class="header__item"><a id="name" class="filter__link" href="#">#</a></div>
+					<div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Código</a></div>
+					<div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Nombre</a></div>
+					<div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Marca</a></div>
+					<div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Precio</a></div>
+					<div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Acciones</a></div>
+				</div>
+
+				<div class="table-content">
+                    {% for producto in productos %}
+                        <div class="table-row">
+                            <div class="table-data">{{ producto.id }}</div>
+                            <div class="table-data">{{ producto.code }}</div>
+                            <div class="table-data">{{ producto.name }}</div>
+                            <div class="table-data">{{ producto.brand }}</div>
+                            <div class="table-data">{{ producto.price }}</div>
+                            <div class="table-data">
+                                <a href="{{ path('edit', {'id': producto.id}) }}" class="button btnEditar">Editar</a>
+                                <button onClick="deleteProducto('{{ path('delete', {'id': producto.id}) }}')" class="button btnEliminar">Eliminar</button>
+                            </div>
+                        </div>
+                    {% endfor %}
+				</div>
+			</div>
+
+			<div class="navigation">
+				{{ knp_pagination_render(productos) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

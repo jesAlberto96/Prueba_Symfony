@@ -1,0 +1,17 @@
+{% extends "layout.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+{% endblock %}
+
+{% block title %}Editar producto!{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="title">Editar producto</div>
+
+        {{ form(form, {'action': path('edit', { 'id': id}), 'method': 'POST'}) }}
+
+        <a class="button btnEliminar" href="{{ path('inicio') }}">Atrás</a>
+    </div>
+{% endblock %}
